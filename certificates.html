@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificates | Malkit Choudhary</title>
+  <meta name="description" content="Certificates of Malkit Choudhary - Data Science Portfolio">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+    <nav>
+      <a href="index.html" onclick="closeMobile()">Home</a>
+      <a href="about.html" onclick="closeMobile()">About</a>
+      <a href="skills.html" onclick="closeMobile()">Skills</a>
+      <a href="projects.html" onclick="closeMobile()">Projects</a>
+      <a href="certificates.html" class="active" onclick="closeMobile()">Certificates</a>
+      <a href="experience.html" onclick="closeMobile()">Experience</a>
+      <a href="contact.html" onclick="closeMobile()">Contact</a>
+    </nav>
+  </div>
+  <div class="menu-overlay" id="menuOverlay" onclick="closeMobile()"></div>
+
+  <header class="navbar" id="navbar">
+    <a href="index.html" class="logo" aria-label="Malkit - Home">MALKIT</a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certificates.html" class="active">Certificates</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+        <span class="theme-icon" id="themeIcon">☀️</span>
+      </button>
+      <a href="contact.html" class="btn-hire">Contact Me</a>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+<!-- ===== CERTIFICATES ===== -->
+  <section id="certificates" class="cert-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Credentials</span>
+        <h2 class="section-title">My <span>Certifications</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="cert-grid">
+
+        <div class="cert-card reveal">
+          <div class="cert-img-wrap">
+            <img src="https://www.suno.edu/assets/suno/google-cert.png" alt="Google Analytics Certification" loading="lazy"
+              onerror="this.parentElement.style.background='linear-gradient(135deg,#0a1628,#0d2a4a)';this.style.display='none'">
+            <div class="cert-logo">📊</div>
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">Google</span>
+            <h3>Google Analytics Certification</h3>
+            <p>Certified in data tracking, audience analysis, and insights with Google Analytics.</p>
+            <div class="cert-footer">
+              <span class="cert-date">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                March 2026
+              </span>
+              <div class="cert-actions">
+                <a href="image copy.png" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="View Google Analytics Certificate">View</a>
+                <a href="javascript:void(0)" class="cert-link" aria-label="Show Google Analytics Credential">Show credential</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-img-wrap">
+            <img src="https://static.startuptalky.com/2021/04/codechef-startuptalky.jpg" alt="Deep Learning &amp; AI Certificate" loading="lazy"
+              onerror="this.parentElement.style.background='linear-gradient(135deg,#0a1628,#150d38)';this.style.display='none'">
+            <div class="cert-logo">🤖</div>
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">CodeChef</span>
+            <h3>Deep Learning &amp; AI</h3>
+            <p>Completed the Deep Learning and Artificial Intelligence track with hands-on projects.</p>
+            <div class="cert-footer">
+              <span class="cert-date">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                February 2026
+              </span>
+              <div class="cert-actions">
+                <a href="image.png" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="View Deep Learning Certificate">View</a>
+                <a href="javascript:void(0)" class="cert-link" aria-label="Show Deep Learning Credential">Show credential</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-img-wrap">
+            <img src="https://www.sandiego.edu/careers/images/Forage-blue.png" alt="Data Analytics Job Simulation Certificate" loading="lazy"
+              onerror="this.parentElement.style.background='linear-gradient(135deg,#0a1628,#1a1028)';this.style.display='none'">
+            <div class="cert-logo">📈</div>
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">Quantium · Forage</span>
+            <h3>Data Analytics Job Simulation</h3>
+            <p>Real-world analytics tasks: data prep, experimentation design, and business insights.</p>
+            <div class="cert-footer">
+              <span class="cert-date">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                March 2026
+              </span>
+              <div class="cert-actions">
+                <a href="forage.pdf" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="View Data Analytics Certificate">View</a>
+                <a href="javascript:void(0)" class="cert-link" aria-label="Show Data Analytics Credential">Show credential</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+            <div class="cert-grid" style="margin-top: 40px;">
+
+        <div class="cert-card reveal">
+          <div class="cert-img-wrap">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhQ1pNl6ZN0vL33zm4Aez-lKrLHcRRJe75mQ&s" alt="Google Analytics Certification" loading="lazy"
+              onerror="this.parentElement.style.background='linear-gradient(135deg,#0a1628,#0d2a4a)';this.style.display='none'">
+            <div class="cert-logo">📊</div>
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">Google</span>
+            <h3>Google Analytics Certification</h3>
+            <p>Certified in data tracking, audience analysis, and insights with Google Analytics.</p>
+            <div class="cert-footer">
+              <span class="cert-date">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                March 2026
+              </span>
+              <div class="cert-actions">
+                <a href="deloit.pdf" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="View Deloitte Certificate">View</a>
+                <a href="javascript:void(0)" class="cert-link" aria-label="Show Deloitte Credential">Show credential</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-img-wrap">
+            <img src="https://static.startuptalky.com/2021/04/codechef-startuptalky.jpg" alt="Deep Learning &amp; AI Certificate" loading="lazy"
+              onerror="this.parentElement.style.background='linear-gradient(135deg,#0a1628,#150d38)';this.style.display='none'">
+            <div class="cert-logo">🤖</div>
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">CodeChef</span>
+            <h3>Deep Learning &amp; AI</h3>
+            <p>Completed the Deep Learning and Artificial Intelligence track with hands-on projects.</p>
+            <div class="cert-footer">
+              <span class="cert-date">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                February 2026
+              </span>
+              <div class="cert-actions">
+                <a href="image.png" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="View Deep Learning Certificate">View</a>
+                <a href="javascript:void(0)" class="cert-link" aria-label="Show Deep Learning Credential">Show credential</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-img-wrap">
+            <img src="https://www.sandiego.edu/careers/images/Forage-blue.png" alt="Data Analytics Job Simulation Certificate" loading="lazy"
+              onerror="this.parentElement.style.background='linear-gradient(135deg,#0a1628,#1a1028)';this.style.display='none'">
+            <div class="cert-logo">📈</div>
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">Quantium · Forage</span>
+            <h3>Data Analytics Job Simulation</h3>
+            <p>Real-world analytics tasks: data prep, experimentation design, and business insights.</p>
+            <div class="cert-footer">
+              <span class="cert-date">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                March 2026
+              </span>
+              <div class="cert-actions">
+                <a href="forage.pdf" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="View Data Analytics Certificate">View</a>
+                <a href="javascript:void(0)" class="cert-link" aria-label="Show Data Analytics Credential">Show credential</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="logo">MALKIT</div>
+      <p>Designed &amp; built by <span>Malkit Choudhary</span> &nbsp;·&nbsp; 2026</p>
+      <div class="footer-links">
+        <a href="https://github.com/malkitchoudhary" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/malkit-choudhary-759688326/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+        <a href="mailto:malkitjaat50@gmail.com" aria-label="Email">Email</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Malkit Choudhary</title>
+  <meta name="description" content="Projects of Malkit Choudhary - Data Science Portfolio">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+    <nav>
+      <a href="index.html" onclick="closeMobile()">Home</a>
+      <a href="about.html" onclick="closeMobile()">About</a>
+      <a href="skills.html" onclick="closeMobile()">Skills</a>
+      <a href="projects.html" class="active" onclick="closeMobile()">Projects</a>
+      <a href="certificates.html" onclick="closeMobile()">Certificates</a>
+      <a href="experience.html" onclick="closeMobile()">Experience</a>
+      <a href="contact.html" onclick="closeMobile()">Contact</a>
+    </nav>
+  </div>
+  <div class="menu-overlay" id="menuOverlay" onclick="closeMobile()"></div>
+
+  <header class="navbar" id="navbar">
+    <a href="index.html" class="logo" aria-label="Malkit - Home">MALKIT</a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="certificates.html">Certificates</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+        <span class="theme-icon" id="themeIcon">☀️</span>
+      </button>
+      <a href="contact.html" class="btn-hire">Contact Me</a>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== ML PROJECTS ===== -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">What I've Built</span>
+        <h2 class="section-title">Machine <span>Learning</span> Projects</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="projects-grid">
+
+
+                <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="https://i.ytimg.com/vi/2sUf_eKmr7U/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB3b_5M2kQS-aUxG5ZZp0M5fisgwQ" alt="AI Resume Screening project" loading="lazy">
+            <div class="project-overlay" aria-hidden="true"></div>
+            <span class="project-badge ml">ML</span>
+          </div>
+          <div class="project-body">
+            <h3>AI Resume Screening & Candidate Ranking System</h3>
+            <p>Developed an AI-based system to analyze resumes and rank candidates based on job requirements. It helps automate the hiring process and improves candidate selection efficiency.</p>
+            <div class="project-links">
+              <a href="https://ai-resume-screening-candidate-ranki-seven.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-sm btn-accent">
+                Live Demo
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="https://github.com/malkitchoudhary/AI-Resume-Screening-Candidate-Ranking-System" target="_blank" rel="noopener noreferrer" class="btn-sm btn-ghost">
+                GitHub
+                <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="https://rskworld.in/data-science/notebooks/spam-email-detection/spam-email-detection.png" alt="Email Spam Detection project" loading="lazy">
+            <div class="project-overlay" aria-hidden="true"></div>
+            <span class="project-badge ml">ML</span>
+          </div>
+          <div class="project-body">
+            <h3>Email Spam Detection</h3>
+            <p>Developed an NLP-based email classifier using TF-IDF and Naive Bayes to accurately detect spam and filter legitimate emails, showcasing skills in text preprocessing and machine learning, with strong performance on real-world datasets.</p>
+            <div class="project-links">
+              <a href="https://email-spam-api-three.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-sm btn-accent">
+                Live Demo
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-ghost btn-disabled">
+                GitHub
+                <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="https://user-images.githubusercontent.com/48794028/148332938-4e66d4ca-2d16-474f-8482-340aef6a48d0.png" alt="House Price Prediction project" loading="lazy">
+            <div class="project-overlay" aria-hidden="true"></div>
+            <span class="project-badge ml">ML</span>
+          </div>
+          <div class="project-body">
+            <h3>House Price Prediction</h3>
+            <p>Developed a regression-based model to predict house prices using feature engineering, exploratory data analysis (EDA), and model evaluation techniques, ensuring accurate and reliable predictions.</p>
+            <div class="project-links">
+              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-accent btn-disabled">
+                Live Demo
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-ghost btn-disabled">
+                GitHub
+                <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        
+      </div>
+
+            <div class="projects-grid" style="margin-top: 50px;">
+
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/001/498/581/datas/original.jpg" alt="Email Spam Detection project" loading="lazy">
+            <div class="project-overlay" aria-hidden="true"></div>
+            <span class="project-badge ml">ML</span>
+          </div>
+          <div class="project-body">
+            <h3>Medical Disease Prediction System</h3>
+            <p>Built a machine learning model to predict diseases based on patient data. The system analyzes symptoms and provides accurate predictions to assist in early diagnosis.</p>
+            <div class="project-links">
+              <a href="https://email-spam-api-4.onrender.com" target="_blank" rel="noopener noreferrer" class="btn-sm btn-accent">
+                Live Demo
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-ghost btn-disabled">
+                GitHub
+                <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+
+
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcHxVB6A0nHVUwasxYqsnbdwn6sH8jlolI-A&s" alt="ML Model Deployment project" loading="lazy">
+            <div class="project-overlay" aria-hidden="true"></div>
+            <span class="project-badge ml">ML</span>
+          </div>
+          <div class="project-body">
+            <h3>End-to-End ML Model Deployment with FastAPI & Docker</h3>
+            <p>Built an ML pipeline using FastAPI and Docker for real-time predictions with scalable and portable deployment.</p>
+            <div class="project-links">
+              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-accent btn-disabled">
+                Live Demo
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-ghost btn-disabled">
+                GitHub
+                <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="https://www.shutterstock.com/image-vector/electronic-health-record-medical-patient-260nw-2480115479.jpg" alt="Patient Record System project" loading="lazy">
+            <div class="project-overlay" aria-hidden="true"></div>
+            <span class="project-badge ml">ML</span>
+          </div>
+          <div class="project-body">
+            <h3>Patient Record System</h3>
+            <p>Designed a patient record management system to store, organize, and analyze healthcare data with structured workflows, ensuring efficient data handling and improved decision-making across multiple healthcare use cases.</p>
+            <div class="project-links">
+              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-accent btn-disabled">
+                Live Demo
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-ghost btn-disabled">
+                GitHub
+                <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+
+      </div>
+    </div>
+  </section>
+  <!-- ===== DL PROJECTS ===== -->
+  <section id="dl-projects" class="projects-section projects-section--alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Neural Networks</span>
+        <h2 class="section-title">Deep <span>Learning</span> Projects</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOI3mBhZYbDdod3gx-xLrdydFs0wA2gg06gg&s" alt="Face Recognition project" loading="lazy">
+            <div class="project-overlay" aria-hidden="true"></div>
+            <span class="project-badge dl">DL</span>
+          </div>
+          <div class="project-body">
+            <h3>Face Recognition</h3>
+            <p>Deep learning-based system to detect and verify human identities from images in real time.</p>
+            <div class="project-links">
+              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-accent2 btn-disabled">
+                Live Demo
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-ghost btn-disabled">
+                GitHub
+                <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="https://techvidvan.com/tutorials/wp-content/uploads/2021/06/machine-learning-project-movie-recommendation-system.jpg" alt="Movie Recommendation System project" loading="lazy">
+            <div class="project-overlay" aria-hidden="true"></div>
+            <span class="project-badge dl">DL</span>
+          </div>
+          <div class="project-body">
+            <h3>Movie Recommendation</h3>
+            <p>Collaborative filtering + deep learning to recommend personalized movies based on user preferences.</p>
+            <div class="project-links">
+              <a href="https://movie-recommender-system-dun.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-sm btn-accent2">
+                Live Demo
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="https://github.com/malkitchoudhary/movie-recommender-system" target="_blank" rel="noopener noreferrer" class="btn-sm btn-ghost">
+                GitHub
+                <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwaRdd4x1IT8aoP-k5WZyv_wJ-S_T4NbdTQ&s" alt="Voice Assistant project" loading="lazy">
+            <div class="project-overlay" aria-hidden="true"></div>
+            <span class="project-badge dl">DL</span>
+          </div>
+          <div class="project-body">
+            <h3>Voice Assistant</h3>
+            <p>AI-powered voice assistant using speech recognition, NLP, and intent classification for smart interactions.</p>
+            <div class="project-links">
+              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-accent2 btn-disabled">
+                Live Demo
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-ghost btn-disabled">
+                GitHub
+                <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+   <!-- ===== DATA ANALYST PROJECTS ===== -->
+  <section id="data-analyst-projects" class="projects-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Business Intelligence</span>
+        <h2 class="section-title">Data Analyst &amp; <span>Power BI</span> Projects</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="https://www.geckoboard.com/_next/static/media/Sales-Manager-Live-Monitoring-dashboard-example.fc3da610.png" alt="Executive Sales Performance Power BI dashboard" loading="lazy">
+            <div class="project-overlay" aria-hidden="true"></div>
+            <span class="project-badge bi">Power BI</span>
+          </div>
+          <div class="project-body">
+            <h3>Executive Sales Performance Dashboard</h3>
+            <p>Built an interactive Power BI dashboard to track revenue, profit margin, regional sales, product performance, and monthly growth trends for fast executive decision-making.</p>
+            <div class="project-links">
+              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-accent3 btn-disabled">
+                Live Dashboard
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-ghost btn-disabled">Case Study</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKh4Fwak5VBsZIxfZ8s6XZ5t2ypSQhlP3c6w&s" alt="Customer churn analysis Power BI dashboard" loading="lazy">
+            <div class="project-overlay" aria-hidden="true"></div>
+            <span class="project-badge bi">Power BI</span>
+          </div>
+          <div class="project-body">
+            <h3>Customer Churn &amp; Retention Analytics</h3>
+            <p>Designed a customer analytics report with churn rate, retention cohorts, high-risk segments, revenue leakage, and drill-through pages to identify customers likely to leave.</p>
+            <div class="project-links">
+              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-accent3 btn-disabled">
+                Live Dashboard
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-ghost btn-disabled">Case Study</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="https://cdn.boldbi.com/wp/blogs/finance-dashboard-examples/inisde-images-finance/finance-performance-dashboard.webp" alt="Financial performance Power BI dashboard" loading="lazy">
+            <div class="project-overlay" aria-hidden="true"></div>
+            <span class="project-badge bi">Power BI</span>
+          </div>
+          <div class="project-body">
+            <h3>Financial Performance &amp; Forecasting Dashboard</h3>
+            <p>Created a finance dashboard covering revenue, expenses, variance analysis, YoY growth, budget vs actuals, and forecasting visuals using Power Query and DAX measures.</p>
+            <div class="project-links">
+              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-accent3 btn-disabled">
+                Live Dashboard
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-ghost btn-disabled">Case Study</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="logo">MALKIT</div>
+      <p>Designed &amp; built by <span>Malkit Choudhary</span> &nbsp;·&nbsp; 2026</p>
+      <div class="footer-links">
+        <a href="https://github.com/malkitchoudhary" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/malkit-choudhary-759688326/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+        <a href="mailto:malkitjaat50@gmail.com" aria-label="Email">Email</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="main.js"></script>
+</body>
+</html>

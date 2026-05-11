@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Malkit Choudhary</title>
+  <meta name="description" content="About Malkit Choudhary - Data Science Portfolio">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== CUSTOM CURSOR (desktop only) ===== -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ===== MOBILE SLIDE MENU ===== -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+    <nav>
+      <a href="index.html" onclick="closeMobile()">Home</a>
+      <a href="about.html" class="active" onclick="closeMobile()">About</a>
+      <a href="skills.html" onclick="closeMobile()">Skills</a>
+      <a href="projects.html" onclick="closeMobile()">Projects</a>
+      <a href="certificates.html" onclick="closeMobile()">Certificates</a>
+      <a href="experience.html" onclick="closeMobile()">Experience</a>
+      <a href="contact.html" onclick="closeMobile()">Contact</a>
+    </nav>
+  </div>
+  <div class="menu-overlay" id="menuOverlay" onclick="closeMobile()"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <a href="index.html" class="logo" aria-label="Malkit - Home">MALKIT</a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+        <span class="theme-icon" id="themeIcon">☀️</span>
+      </button>
+      <a href="contact.html" class="btn-hire">Contact Me</a>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Who I Am</span>
+        <h2 class="section-title">Passionate about <span>Data</span> &amp; Intelligence</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid reveal">
+        <div class="about-img-wrap">
+          <img
+            src="malkit.jpeg"
+            alt="Malkit Choudhary"
+            onerror="this.src='https://ui-avatars.com/api/?name=Malkit+Choudhary&background=38bdf8&color=050c1a&size=400&bold=true&font-size=0.33'"
+          >
+          <div class="about-deco" aria-hidden="true"></div>
+        </div>
+
+        <div class="about-text">
+          <p>
+            Hello! I'm <strong>Malkit Choudhary</strong>, a Data Science enthusiast and Python developer
+            who loves turning raw data into meaningful insights.
+          </p>
+          <p>
+            Currently pursuing BCA while diving deep into Machine Learning, Deep Learning, and building
+            real-world AI-powered applications that solve actual problems.
+          </p>
+
+          <div class="about-tags" role="list" aria-label="Skills tags">
+            <span class="tag" role="listitem">Python</span>
+            <span class="tag" role="listitem">Machine Learning</span>
+            <span class="tag" role="listitem">Data Analysis</span>
+            <span class="tag" role="listitem">Deep Learning</span>
+            <span class="tag" role="listitem">FastAPI</span>
+            <span class="tag" role="listitem">Web Dev</span>
+          </div>
+
+          <div class="about-info-grid">
+            <div class="info-item">
+              <div class="info-label">Name</div>
+              <div class="info-val">Malkit Choudhary</div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">Email</div>
+              <div class="info-val">malkitjaat50@gmail.com</div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">Education</div>
+              <div class="info-val">BCA (Pursuing)</div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">Location</div>
+              <div class="info-val">India 🇮🇳</div>
+            </div>
+          </div>
+
+          <a href="resume.pdf" class="btn-primary" download aria-label="Download CV">
+            Download CV <span aria-hidden="true">↓</span>
+          </a>
+          <a href="resume.pdf" class="btn-outline" target="_blank" rel="noopener noreferrer" aria-label="Show Resume">
+            Show Resume <span aria-hidden="true">👁️</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+ <footer class="footer">
+    <div class="container footer-inner">
+      <div class="logo">MALKIT</div>
+      <p>Designed &amp; built by <span>Malkit Choudhary</span> &nbsp;·&nbsp; 2026</p>
+      <div class="footer-links">
+        <a href="https://github.com/malkitchoudhary" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/malkit-choudhary-759688326/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+        <a href="mailto:malkitjaat50@gmail.com" aria-label="Email">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

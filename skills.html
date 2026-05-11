@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills | Malkit Choudhary</title>
+  <meta name="description" content="Skills of Malkit Choudhary - Data Science Portfolio">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+    <nav>
+      <a href="index.html" onclick="closeMobile()">Home</a>
+      <a href="about.html" onclick="closeMobile()">About</a>
+      <a href="skills.html" class="active" onclick="closeMobile()">Skills</a>
+      <a href="projects.html" onclick="closeMobile()">Projects</a>
+      <a href="certificates.html" onclick="closeMobile()">Certificates</a>
+      <a href="experience.html" onclick="closeMobile()">Experience</a>
+      <a href="contact.html" onclick="closeMobile()">Contact</a>
+    </nav>
+  </div>
+  <div class="menu-overlay" id="menuOverlay" onclick="closeMobile()"></div>
+
+  <header class="navbar" id="navbar">
+    <a href="index.html" class="logo" aria-label="Malkit - Home">MALKIT</a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html" class="active">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certificates.html">Certificates</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+        <span class="theme-icon" id="themeIcon">☀️</span>
+      </button>
+      <a href="contact.html" class="btn-hire">Contact Me</a>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+
+
+
+
+
+
+    <!-- ===== SKILLS ===== -->
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">What I Know</span>
+        <h2 class="section-title">My <span>Skills</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-card reveal">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png" alt="Python" loading="lazy">
+          <h3>Python</h3>
+        </div>
+        <div class="skill-card reveal">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++" loading="lazy">
+          <h3>C++</h3>
+        </div>
+        <div class="skill-card reveal">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" loading="lazy">
+          <h3>JavaScript</h3>
+        </div>
+        <div class="skill-card reveal">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Machine Learning" loading="lazy">
+          <h3>Machine Learning</h3>
+        </div>
+        <div class="skill-card reveal">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" alt="Pandas" loading="lazy">
+          <h3>Pandas</h3>
+        </div>
+        <div class="skill-card reveal">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="NumPy" loading="lazy">
+          <h3>NumPy</h3>
+        </div>
+        <div class="skill-card reveal">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" alt="Matplotlib" loading="lazy">
+          <h3>Matplotlib</h3>
+        </div>
+        <div class="skill-card reveal">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Logo-seaborn.png/330px-Logo-seaborn.png" alt="Seaborn" loading="lazy">
+          <h3>Seaborn</h3>
+        </div>
+        <div class="skill-card reveal">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL" loading="lazy">
+          <h3>SQL</h3>
+        </div>
+        <div class="skill-card reveal">
+          <img src="https://files.svgcdn.io/logos/fastapi.svg" alt="FastAPI" loading="lazy">
+          <h3>FastAPI</h3>
+        </div>
+        <div class="skill-card reveal">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" loading="lazy">
+          <h3>Power BI</h3>
+        </div>
+        <div class="skill-card reveal">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Keras_logo.svg" alt="Deep Learning / Keras" loading="lazy">
+          <h3>Deep Learning</h3>
+        </div>
+
+      </div>
+    </div>
+  </section>
+ <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="logo">MALKIT</div>
+      <p>Designed &amp; built by <span>Malkit Choudhary</span> &nbsp;·&nbsp; 2026</p>
+      <div class="footer-links">
+        <a href="https://github.com/malkitchoudhary" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/malkit-choudhary-759688326/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+        <a href="mailto:malkitjaat50@gmail.com" aria-label="Email">Email</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="main.js"></script>
+</body>
+</html>

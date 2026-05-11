@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Malkit Choudhary</title>
+  <meta name="description" content="Contact Malkit Choudhary - Data Science Portfolio">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+    <nav>
+      <a href="index.html" onclick="closeMobile()">Home</a>
+      <a href="about.html" onclick="closeMobile()">About</a>
+      <a href="skills.html" onclick="closeMobile()">Skills</a>
+      <a href="projects.html" onclick="closeMobile()">Projects</a>
+      <a href="certificates.html" onclick="closeMobile()">Certificates</a>
+      <a href="experience.html" onclick="closeMobile()">Experience</a>
+      <a href="contact.html" class="active" onclick="closeMobile()">Contact</a>
+    </nav>
+  </div>
+  <div class="menu-overlay" id="menuOverlay" onclick="closeMobile()"></div>
+
+  <header class="navbar" id="navbar">
+    <a href="index.html" class="logo" aria-label="Malkit - Home">MALKIT</a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certificates.html">Certificates</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+        <span class="theme-icon" id="themeIcon">☀️</span>
+      </button>
+      <a href="contact.html" class="btn-hire">Contact Me</a>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-info reveal">
+          <span class="section-label">Get In Touch</span>
+          <h2>Let's Build Something <span>Together</span></h2>
+          <p>I'm open to internships, collaborations, freelance work, and exciting data science projects. Let's connect!</p>
+
+          <div class="contact-channels">
+            <a href="mailto:malkitjaat50@gmail.com" class="channel-item">
+              <div class="channel-icon">✉️</div>
+              <div>
+                <div class="channel-label">Email</div>
+                <div class="channel-val">malkitjaat50@gmail.com</div>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/malkit-choudhary-759688326/" target="_blank" rel="noopener noreferrer" class="channel-item">
+              <div class="channel-icon">💼</div>
+              <div>
+                <div class="channel-label">LinkedIn</div>
+                <div class="channel-val">Malkit choudhary</div>
+              </div>
+            </a>
+
+            <a href="https://github.com/malkitchoudhary" target="_blank" rel="noopener noreferrer" class="channel-item">
+              <div class="channel-icon">🐙</div>
+              <div>
+                <div class="channel-label">GitHub</div>
+                <div class="channel-val">github.com/malkitchoudhary</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+<form
+  class="contact-form"
+  action="https://formsubmit.co/4379660ea68fe20378393e763d988064"
+  method="POST"
+>
+            <input type="hidden" name="_subject" value="New Portfolio Contact Message">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Rahul Sharma" required autocomplete="name">
+              <span class="form-error" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="rahul@example.com" required autocomplete="email">
+              <span class="form-error" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Hi Malkit, I'd love to collaborate on..." required></textarea>
+              <span class="form-error" id="messageError"></span>
+            </div>
+
+            <button type="submit" class="btn-primary btn-full" id="submitBtn">
+              <span id="submitText">Send Message</span>
+              <span id="submitSpinner" class="hidden">Sending...</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="logo">MALKIT</div>
+      <p>Designed &amp; built by <span>Malkit Choudhary</span> &nbsp;·&nbsp; 2026</p>
+      <div class="footer-links">
+        <a href="https://github.com/malkitchoudhary" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/malkit-choudhary-759688326/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+        <a href="mailto:malkitjaat50@gmail.com" aria-label="Email">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
