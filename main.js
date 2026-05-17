@@ -286,30 +286,29 @@ if (form) {
       formSuccess.textContent = '';
     }
 
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' }
-      });
+    const frameName = 'contactSubmitFrame';
+    let frame = document.querySelector(`iframe[name="${frameName}"]`);
+    if (!frame) {
+      frame = document.createElement('iframe');
+      frame.name = frameName;
+      frame.className = 'hidden';
+      frame.title = 'Contact form submission';
+      document.body.appendChild(frame);
+    }
 
-      if (!response.ok) throw new Error('Message could not be sent.');
+    form.target = frameName;
+    HTMLFormElement.prototype.submit.call(form);
 
+    setTimeout(() => {
       form.reset();
       if (formSuccess) {
         formSuccess.textContent = 'Thank you! Your message has been sent successfully.';
         formSuccess.classList.remove('hidden');
       }
-    } catch (err) {
-      if (formSuccess) {
-        formSuccess.textContent = 'Sorry, message could not be sent. Please try again.';
-        formSuccess.classList.remove('hidden');
-      }
-    } finally {
       submitText?.classList.remove('hidden');
       submitSpinner?.classList.add('hidden');
       if (submitBtn) submitBtn.disabled = false;
-    }
+    }, 1200);
   });
 
   form.addEventListener('submit', async e => {
