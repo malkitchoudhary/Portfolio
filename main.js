@@ -220,7 +220,7 @@ if (statsWrap) {
 }
 
 /* ─── 8. CONTACT FORM ───────────────────────── */
-const form         = $('contactForm');
+const form         = $('contactForm') || document.querySelector('.contact-form');
 const submitBtn    = $('submitBtn');
 const submitText   = $('submitText');
 const submitSpinner = $('submitSpinner');
@@ -271,6 +271,45 @@ if (form) {
     $(id)?.addEventListener('input', () => {
       clearError(id, id + 'Error');
     });
+  });
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    if (!validateForm()) return;
+
+    submitText?.classList.add('hidden');
+    submitSpinner?.classList.remove('hidden');
+    if (submitBtn) submitBtn.disabled = true;
+    if (formSuccess) {
+      formSuccess.classList.add('hidden');
+      formSuccess.textContent = '';
+    }
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (!response.ok) throw new Error('Message could not be sent.');
+
+      form.reset();
+      if (formSuccess) {
+        formSuccess.textContent = 'Thank you! Your message has been sent successfully.';
+        formSuccess.classList.remove('hidden');
+      }
+    } catch (err) {
+      if (formSuccess) {
+        formSuccess.textContent = 'Sorry, message could not be sent. Please try again.';
+        formSuccess.classList.remove('hidden');
+      }
+    } finally {
+      submitText?.classList.remove('hidden');
+      submitSpinner?.classList.add('hidden');
+      if (submitBtn) submitBtn.disabled = false;
+    }
   });
 
   form.addEventListener('submit', async e => {
