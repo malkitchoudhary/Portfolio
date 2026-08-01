@@ -3,6 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050c1a">
+  <meta name="application-name" content="Malkit Portfolio">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Malkit Portfolio">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
   <title>Malkit Choudhary | Data Science Portfolio</title>
   <meta name="description" content="Data Science Portfolio of Malkit Choudhary – Python Developer, ML & Deep Learning Enthusiast">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,13 +29,13 @@
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
     <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
     <nav>
-      <a href="index.html" onclick="closeMobile()">Home</a>
-      <a href="about.html" onclick="closeMobile()">About</a>
-      <a href="skills.html" onclick="closeMobile()">Skills</a>
-      <a href="projects.html" onclick="closeMobile()">Projects</a>
-      <a href="certificates.html" onclick="closeMobile()">Certificates</a>
-      <a href="experience.html" onclick="closeMobile()">Experience</a>
-      <a href="contact.html" onclick="closeMobile()">Contact</a>
+      <a href="#home"         onclick="closeMobile()">Home</a>
+      <a href="#about"        onclick="closeMobile()">About</a>
+      <a href="#skills"       onclick="closeMobile()">Skills</a>
+      <a href="#projects"     onclick="closeMobile()">Projects</a>
+      <a href="#certificates" onclick="closeMobile()">Certificates</a>
+      <a href="#experience"     onclick="closeMobile()">Experience</a>
+      <a href="#contact"      onclick="closeMobile()">Contact</a>
     </nav>
   </div>
   <div class="menu-overlay" id="menuOverlay" onclick="closeMobile()"></div>
@@ -45,11 +54,11 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="nav-actions">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
-        <span class="theme-icon" id="themeIcon">☀️</span>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" aria-pressed="false" title="Toggle theme">
+        <span class="theme-icon" id="themeIcon">🌙</span>
       </button>
       <a href="#contact" class="btn-hire">Contact Me</a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -58,11 +67,6 @@
   <!-- ===== HERO ===== -->
   <section class="hero" id="home">
     <div class="hero-grid" aria-hidden="true"></div>
-    <div class="live-bg" aria-hidden="true">
-      <span></span><span></span><span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span><span></span><span></span>
-    </div>
     <div class="orb orb-1" aria-hidden="true"></div>
     <div class="orb orb-2" aria-hidden="true"></div>
 
@@ -107,11 +111,11 @@
         <div class="stat-label">PROJECTS</div>
       </div>
       <div class="stat">
-        <div class="stat-num" data-count="28" aria-label="28 skills">0+</div>
+        <div class="stat-num" data-count="12" aria-label="12 skills">0+</div>
         <div class="stat-label">SKILLS</div>
       </div>
       <div class="stat">
-        <div class="stat-num" data-count="6" aria-label="3 certifications">0+</div>
+        <div class="stat-num" data-count="3" aria-label="3 certifications">0+</div>
         <div class="stat-label">CERTS</div>
       </div>
       <div class="stat">
@@ -183,8 +187,10 @@
             </div>
           </div>
 
-         
-          <a href="resume.pdf" class="btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Show Resume">
+          <a href="resume.pdf" class="btn-primary" download aria-label="Download CV">
+            Download CV <span aria-hidden="true">↓</span>
+          </a>
+          <a href="resume.pdf" class="btn-outline" target="_blank" rel="noopener noreferrer" aria-label="Show Resume">
   Show Resume <span aria-hidden="true">👁️</span>
 </a>
         </div>
@@ -196,126 +202,231 @@
   <section id="skills" class="skills-section">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-label">What I Know</span>
-        <h2 class="section-title">My <span>Skills</span></h2>
+        <span class="section-label">Technical Matrix</span>
+        <h2 class="section-title">Core <span>Competencies</span></h2>
         <div class="section-line"></div>
       </div>
 
-      <div class="skills-grid">
+      <div class="skills-grid skills-matrix">
+        <article class="skill-category reveal">
+          <h3>Languages & APIs</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png" alt="Python" loading="lazy">
+              <div>
+                <h4>Python</h4>
+                <p>Object oriented logic & analytics algorithms</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++" loading="lazy">
+              <div>
+                <h4>C++</h4>
+                <p>Advanced structures and algorithmic efficiency</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <img src="https://files.svgcdn.io/logos/fastapi.svg" alt="FastAPI" loading="lazy">
+              <div>
+                <h4>FastAPI</h4>
+                <p>Highly scalable REST API structures</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" loading="lazy">
+              <div>
+                <h4>JavaScript</h4>
+                <p>Asynchronous web structures & dashboards</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" loading="lazy">
+              <div>
+                <h4>HTML</h4>
+                <p>Semantic page structures and accessible markup</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" loading="lazy">
+              <div>
+                <h4>CSS</h4>
+                <p>Responsive layouts, animations, and visual systems</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" loading="lazy">
+              <div>
+                <h4>Bootstrap</h4>
+                <p>Fast responsive UI grids and component styling</p>
+              </div>
+            </div>
+          </div>
+        </article>
 
-        <div class="skill-card reveal">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png" alt="Python" loading="lazy">
-          <h3>Python</h3>
-        </div>
-        <div class="skill-card reveal">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++" loading="lazy">
-          <h3>C++</h3>
-        </div>
-        <div class="skill-card reveal">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" loading="lazy">
-          <h3>JavaScript</h3>
-        </div>
-        <div class="skill-card reveal">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" loading="lazy">
-          <h3>HTML</h3>
-        </div>
-        <div class="skill-card reveal">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" loading="lazy">
-          <h3>CSS</h3>
-        </div>
-        <div class="skill-card reveal">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" loading="lazy">
-          <h3>Bootstrap</h3>
-        </div>
-        <div class="skill-card reveal">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Machine Learning" loading="lazy">
-          <h3>Machine Learning</h3>
-        </div>
-        <div class="skill-card reveal">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="Scikit-learn" loading="lazy">
-          <h3>Scikit-learn</h3>
-        </div>
-        <div class="skill-card reveal">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" alt="Keras" loading="lazy">
-          <h3>Keras</h3>
-        </div>
-        <div class="skill-card reveal">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" loading="lazy">
-          <h3>TensorFlow</h3>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon">NLP</div>
-          <h3>NLP</h3>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon">TF</div>
-          <h3>TF-IDF</h3>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon">CF</div>
-          <h3>Collaborative Filtering</h3>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon">ST</div>
-          <h3>Statistics</h3>
-        </div>
-        <div class="skill-card reveal">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" alt="Pandas" loading="lazy">
-          <h3>Pandas</h3>
-        </div>
-        <div class="skill-card reveal">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="NumPy" loading="lazy">
-          <h3>NumPy</h3>
-        </div>
-        <div class="skill-card reveal">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" alt="Matplotlib" loading="lazy">
-          <h3>Matplotlib</h3>
-        </div>
-        <div class="skill-card reveal">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Logo-seaborn.png/330px-Logo-seaborn.png" alt="Seaborn" loading="lazy">
-          <h3>Seaborn</h3>
-        </div>
-        <div class="skill-card reveal">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL" loading="lazy">
-          <h3>SQL</h3>
-        </div>
-        <div class="skill-card reveal">
-          <img src="https://files.svgcdn.io/logos/fastapi.svg" alt="FastAPI" loading="lazy">
-          <h3>FastAPI</h3>
-        </div>
-        <div class="skill-card reveal">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" loading="lazy">
-          <h3>Power BI</h3>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon">X</div>
-          <h3>Excel</h3>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon">EDA</div>
-          <h3>EDA</h3>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon">DP</div>
-          <h3>Data Preprocessing</h3>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon">FE</div>
-          <h3>Feature Engineering</h3>
-        </div>
-        <div class="skill-card reveal">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Keras_logo.svg" alt="Deep Learning / Keras" loading="lazy">
-          <h3>Deep Learning</h3>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon">GH</div>
-          <h3>GitHub</h3>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon">DSA</div>
-          <h3>DSA</h3>
-        </div>
+        <article class="skill-category reveal">
+          <h3>Data Science</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" alt="Pandas" loading="lazy">
+              <div>
+                <h4>Pandas</h4>
+                <p>Structured table cleanups and data wrangling</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="NumPy" loading="lazy">
+              <div>
+                <h4>NumPy</h4>
+                <p>Array maths, numerical logic, and vector operations</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" alt="Matplotlib" loading="lazy">
+              <div>
+                <h4>Matplotlib</h4>
+                <p>Charts, trend views, and exploratory visuals</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Logo-seaborn.png/330px-Logo-seaborn.png" alt="Seaborn" loading="lazy">
+              <div>
+                <h4>Seaborn</h4>
+                <p>Statistical plots and polished data visualizations</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">EDA</div>
+              <div>
+                <h4>EDA</h4>
+                <p>Exploratory analysis and insight discovery</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">DP</div>
+              <div>
+                <h4>Data Preprocessing</h4>
+                <p>Cleaning, encoding, scaling, and pipeline readiness</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">FE</div>
+              <div>
+                <h4>Feature Engineering</h4>
+                <p>Creating stronger predictors from raw data</p>
+              </div>
+            </div>
+          </div>
+        </article>
 
+        <article class="skill-category reveal">
+          <h3>AI & Machine Learning</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Machine Learning" loading="lazy">
+              <div>
+                <h4>Machine Learning</h4>
+                <p>Predictive models, training workflows, and evaluation</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="Scikit-learn" loading="lazy">
+              <div>
+                <h4>Scikit-Learn</h4>
+                <p>Supervised classification, regression networks</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" alt="Keras" loading="lazy">
+              <div>
+                <h4>Keras</h4>
+                <p>High-level neural network model development</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Keras_logo.svg" alt="Deep Learning" loading="lazy">
+              <div>
+                <h4>Deep Learning</h4>
+                <p>Multi-layer dense and recurrent neural nets</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">NLP</div>
+              <div>
+                <h4>NLP</h4>
+                <p>Token cleaning, text pipelines, and language features</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">TF</div>
+              <div>
+                <h4>TF-IDF</h4>
+                <p>Feature extraction and cosine text similarities</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" loading="lazy">
+              <div>
+                <h4>TensorFlow</h4>
+                <p>Deep learning training and model workflows</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="skill-category reveal">
+          <h3>Business & Foundations</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" loading="lazy">
+              <div>
+                <h4>Power BI</h4>
+                <p>Dynamic dashboards & transactional reporting</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL" loading="lazy">
+              <div>
+                <h4>SQL</h4>
+                <p>Data joining, relational tables, schema designs</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">EX</div>
+              <div>
+                <h4>Excel</h4>
+                <p>VLOOKUP, Pivot reports, statistical logic</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">GH</div>
+              <div>
+                <h4>GitHub</h4>
+                <p>CI/CD deployment and version controls</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">DSA</div>
+              <div>
+                <h4>DSA</h4>
+                <p>Data structures, problem solving, and algorithms</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">ST</div>
+              <div>
+                <h4>Statistics</h4>
+                <p>Distributions, metrics, and analytical reasoning</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">CF</div>
+              <div>
+                <h4>Collaborative Filtering</h4>
+                <p>User-item similarity and recommendation logic</p>
+              </div>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -405,13 +516,16 @@
 
         <article class="project-card reveal">
           <div class="project-img-wrap">
-            <img src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/001/498/581/datas/original.jpg" alt="Email Spam Detection project" loading="lazy">
+            <video class="project-video" autoplay muted loop playsinline controls preload="metadata" aria-label="Skin Disease Multi Model demo video">
+              <source src="Skin%20Disease%20AI%20Assistant%20-%20Google%20Chrome%202026-07-17%2012-58-56.mp4" type="video/mp4">
+              Your browser does not support embedded video.
+            </video>
             <div class="project-overlay" aria-hidden="true"></div>
             <span class="project-badge ml">ML</span>
           </div>
           <div class="project-body">
-            <h3>Medical Disease Prediction System</h3>
-            <p>Built a machine learning model to predict diseases based on patient data. The system analyzes symptoms and provides accurate predictions to assist in early diagnosis.</p>
+            <h3>Skin Disease Multi Model</h3>
+            <p>Built a machine learning system for skin disease prediction using image-based analysis to support faster, more informed screening.</p>
             <div class="project-links">
               <a href="https://email-spam-api-4.onrender.com" target="_blank" rel="noopener noreferrer" class="btn-sm btn-accent">
                 Live Demo
@@ -789,6 +903,7 @@ Gained experience deriving insights and solving problems using data-driven appro
 
 
 
+
 <section id="experience" class="experience-section">
   <div class="container">
 
@@ -798,47 +913,89 @@ Gained experience deriving insights and solving problems using data-driven appro
       <div class="section-line"></div>
     </div>
 
-    <div class="experience-grid">
+     <main style="margin-left: -30%;">
+    <!-- <section id="experience" class="experience-section">
+      <div class="container experience-container">
+        <div class="experience-intro reveal">
+          <span class="experience-kicker">05 / EXPERIENCE &amp; EDUCATION</span>
+          <h1>Always moving forward.</h1>
+        </div> -->
 
-      <!-- Experience 1 -->
-      <div class="exp-card reveal">
-        <div class="exp-top">
-          <span class="exp-badge internship">Internship</span>
-        </div>
-
-        <h3>Quantium – Data Analytics Job Simulation</h3>
-        <p class="exp-role">Virtual Internship</p>
-
-        <p class="exp-desc">
-          Completed real-world data analytics tasks including customer behavior analysis,
-          data cleaning, and visualization. Gained practical experience in business insights
-          and analytics workflow.
-        </p>
-
-        <a href="forage.pdf" target="_blank" rel="noopener noreferrer" class="btn-sm btn-accent">View Certificate</a>
+        <ol class="experience-timeline" aria-label="Experience and education timeline">
+          <li class="timeline-entry reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <p class="timeline-date">JUN 2024 — JUN 2026 · CURRENT</p>
+              <h2>Data Science Trainee</h2>
+              <h3>Tips-G (RNS IT Solution), Alwar</h3>
+              <p>Building end-to-end ML and DL pipelines on real-world datasets, from preprocessing and EDA to production deployment.</p>
+            </div>
+          </li>
+          <li class="timeline-entry reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <p class="timeline-date">JUN 2024 — JUN 2027</p>
+              <h2>Bachelor of Computer Applications</h2>
+              <h3>Manipal University Jaipur</h3>
+              <p>Coursework across Python, data structures, statistics, databases, OOP and web technologies.</p>
+            </div>
+          </li>
+          <li class="timeline-entry reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <p class="timeline-date">MARCH 2026</p>
+              <h2>Data Analytics Job Simulation</h2>
+              <h3>Quantium (Forage) · Virtual</h3>
+              <p>Customer behaviour analysis, experimentation and visual storytelling for data-informed decisions.</p>
+            </div>
+          </li>
+          <li class="timeline-entry reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <p class="timeline-date">2026</p>
+              <h2>Data Analytics Job Simulation</h2>
+              <h3>Deloitte Australia (Forage) · Virtual</h3>
+              <p>Data analysis and forensic investigation through a practical virtual internship.</p>
+            </div>
+          </li>
+        </ol>
       </div>
+    </section>
+  </main>
 
-      <!-- Experience 2 -->
-      <div class="exp-card reveal">
-        <div class="exp-top">
-          <span class="exp-badge training">Training</span>
-        </div>
-
-        <h3>Data Science Trainee – Tips-G, Alwar</h3>
-        <p class="exp-role">1 June 2024 – 1 June 2026</p>
-
-        <p class="exp-desc">
-          Learning Machine Learning and Deep Learning with hands-on projects.
-          Working with Python, Pandas, NumPy, and real-world datasets to build
-          intelligent systems and improve analytical skills.
-        </p>
-
-        <span class="exp-current">Currently Working</span>
-      </div>
-
-    </div>
-  </div>
 </section>
+
+
+
+  <!-- ===== ACHIEVEMENT ===== -->
+  <section id="achievement" class="achievement-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Milestone</span>
+        <h2 class="section-title">Kaggle <span>Achievement</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <article class="achievement-card reveal">
+        <div class="achievement-icon" aria-hidden="true">K</div>
+        <div class="achievement-content">
+          <p class="achievement-kicker">Kaggle Competition</p>
+          <h3>Student Health Risk Prediction</h3>
+          <p>Trained a machine-learning model on the competition dataset to predict student health risk, achieving <strong>94.50% accuracy</strong>.</p>
+          <div class="achievement-metrics" aria-label="Competition results">
+            <div>
+              <span class="metric-value">94.50%</span>
+              <span class="metric-label">My Accuracy</span>
+            </div>
+            <div>
+              <span class="metric-value">95.34%</span>
+              <span class="metric-label">Top Leaderboard Accuracy</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
 
 
 
@@ -880,7 +1037,6 @@ Gained experience deriving insights and solving problems using data-driven appro
 
         <div class="contact-form-wrap reveal">
           <form
-            id="contactForm"
             class="contact-form"
             action="https://formsubmit.co/4379660ea68fe20378393e763d988064"
             method="POST"
@@ -907,9 +1063,6 @@ Gained experience deriving insights and solving problems using data-driven appro
               <span id="submitText">Send Message</span>
               <span id="submitSpinner" class="hidden">Sending...</span>
             </button>
-            <div class="form-success hidden" id="formSuccess" role="status" aria-live="polite">
-              Thank you! Your message has been sent successfully.
-            </div>
           </form>
         </div>
 

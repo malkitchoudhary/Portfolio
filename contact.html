@@ -3,6 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050c1a">
+  <meta name="application-name" content="Malkit Portfolio">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Malkit Portfolio">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
   <title>Contact | Malkit Choudhary</title>
   <meta name="description" content="Contact Malkit Choudhary - Data Science Portfolio">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,11 +50,11 @@
       <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
     <div class="nav-actions">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
-        <span class="theme-icon" id="themeIcon">☀️</span>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" aria-pressed="false" title="Toggle theme">
+        <span class="theme-icon" id="themeIcon">🌙</span>
       </button>
       <a href="contact.html" class="btn-hire">Contact Me</a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -90,7 +99,6 @@
 
         <div class="contact-form-wrap reveal">
 <form
-  id="contactForm"
   class="contact-form"
   action="https://formsubmit.co/4379660ea68fe20378393e763d988064"
   method="POST"
@@ -121,9 +129,6 @@
               <span id="submitText">Send Message</span>
               <span id="submitSpinner" class="hidden">Sending...</span>
             </button>
-            <div class="form-success hidden" id="formSuccess" role="status" aria-live="polite">
-              Thank you! Your message has been sent successfully.
-            </div>
           </form>
         </div>
 

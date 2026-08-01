@@ -1,0 +1,24 @@
+{
+  "name": "Malkit Choudhary | Data Science Portfolio",
+  "short_name": "Malkit Portfolio",
+  "description": "The data science portfolio of Malkit Choudhary.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#050c1a",
+  "theme_color": "#050c1a",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

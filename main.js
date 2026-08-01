@@ -5,6 +5,15 @@
 
 'use strict';
 
+/* PWA: register after the page has loaded so existing interactions remain first. */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('service-worker.js').catch(error => {
+      console.warn('Service worker registration failed:', error);
+    });
+  });
+}
+
 /* ─── HELPERS ─────────────────────────────── */
 const $ = id => document.getElementById(id);
 const isMobile = () => window.innerWidth <= 576;
@@ -17,11 +26,12 @@ const THEME_KEY   = 'mk_theme';
 function applyTheme(mode) {
   if (mode === 'light') {
     document.body.classList.add('light-mode');
-    themeIcon.textContent = '🌙';
+    themeIcon.textContent = '☀️';
   } else {
     document.body.classList.remove('light-mode');
-    themeIcon.textContent = '☀️';
+    themeIcon.textContent = '🌙';
   }
+  themeToggle?.setAttribute('aria-pressed', String(mode === 'light'));
   localStorage.setItem(THEME_KEY, mode);
 }
 
@@ -220,7 +230,7 @@ if (statsWrap) {
 }
 
 /* ─── 8. CONTACT FORM ───────────────────────── */
-const form         = $('contactForm') || document.querySelector('.contact-form');
+const form         = $('contactForm');
 const submitBtn    = $('submitBtn');
 const submitText   = $('submitText');
 const submitSpinner = $('submitSpinner');
@@ -271,44 +281,6 @@ if (form) {
     $(id)?.addEventListener('input', () => {
       clearError(id, id + 'Error');
     });
-  });
-
-  form.addEventListener('submit', async e => {
-    e.preventDefault();
-    e.stopImmediatePropagation();
-    if (!validateForm()) return;
-
-    submitText?.classList.add('hidden');
-    submitSpinner?.classList.remove('hidden');
-    if (submitBtn) submitBtn.disabled = true;
-    if (formSuccess) {
-      formSuccess.classList.add('hidden');
-      formSuccess.textContent = '';
-    }
-
-    const frameName = 'contactSubmitFrame';
-    let frame = document.querySelector(`iframe[name="${frameName}"]`);
-    if (!frame) {
-      frame = document.createElement('iframe');
-      frame.name = frameName;
-      frame.className = 'hidden';
-      frame.title = 'Contact form submission';
-      document.body.appendChild(frame);
-    }
-
-    form.target = frameName;
-    HTMLFormElement.prototype.submit.call(form);
-
-    setTimeout(() => {
-      form.reset();
-      if (formSuccess) {
-        formSuccess.textContent = 'Thank you! Your message has been sent successfully.';
-        formSuccess.classList.remove('hidden');
-      }
-      submitText?.classList.remove('hidden');
-      submitSpinner?.classList.add('hidden');
-      if (submitBtn) submitBtn.disabled = false;
-    }, 1200);
   });
 
   form.addEventListener('submit', async e => {

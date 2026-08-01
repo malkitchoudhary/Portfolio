@@ -3,6 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050c1a">
+  <meta name="application-name" content="Malkit Portfolio">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Malkit Portfolio">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
   <title>Projects | Malkit Choudhary</title>
   <meta name="description" content="Projects of Malkit Choudhary - Data Science Portfolio">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,11 +50,11 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="nav-actions">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
-        <span class="theme-icon" id="themeIcon">☀️</span>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" aria-pressed="false" title="Toggle theme">
+        <span class="theme-icon" id="themeIcon">🌙</span>
       </button>
       <a href="contact.html" class="btn-hire">Contact Me</a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -136,13 +145,16 @@
 
         <article class="project-card reveal">
           <div class="project-img-wrap">
-            <img src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/001/498/581/datas/original.jpg" alt="Email Spam Detection project" loading="lazy">
+            <video class="project-video" autoplay muted loop playsinline controls preload="metadata" aria-label="Skin Disease Multi Model demo video">
+              <source src="Skin%20Disease%20AI%20Assistant%20-%20Google%20Chrome%202026-07-17%2012-58-56.mp4" type="video/mp4">
+              Your browser does not support embedded video.
+            </video>
             <div class="project-overlay" aria-hidden="true"></div>
             <span class="project-badge ml">ML</span>
           </div>
           <div class="project-body">
-            <h3>Medical Disease Prediction System</h3>
-            <p>Built a machine learning model to predict diseases based on patient data. The system analyzes symptoms and provides accurate predictions to assist in early diagnosis.</p>
+            <h3>Skin Disease Multi Model</h3>
+            <p>Built a machine learning system for skin disease prediction using image-based analysis to support faster, more informed screening.</p>
             <div class="project-links">
               <a href="https://email-spam-api-4.onrender.com" target="_blank" rel="noopener noreferrer" class="btn-sm btn-accent">
                 Live Demo

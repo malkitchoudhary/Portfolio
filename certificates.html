@@ -3,6 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050c1a">
+  <meta name="application-name" content="Malkit Portfolio">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Malkit Portfolio">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
   <title>Certificates | Malkit Choudhary</title>
   <meta name="description" content="Certificates of Malkit Choudhary - Data Science Portfolio">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,19 +50,17 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="nav-actions">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
-        <span class="theme-icon" id="themeIcon">☀️</span>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" aria-pressed="false" title="Toggle theme">
+        <span class="theme-icon" id="themeIcon">🌙</span>
       </button>
       <a href="contact.html" class="btn-hire">Contact Me</a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
-
-
-   <!-- ===== CERTIFICATES ===== -->
-  <section id="certificates" class="cert-section">
+<!-- ===== CERTIFICATES ===== -->
+   <section id="certificates" class="cert-section">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-label">Credentials</span>
