@@ -21,6 +21,14 @@
 </head>
 <body>
 
+  <!-- Calm animated light layer behind the home page. -->
+  <div class="portfolio-backdrop" aria-hidden="true">
+    <div class="aurora aurora-one"></div>
+    <div class="aurora aurora-two"></div>
+    <div class="aurora aurora-three"></div>
+    <div class="constellation"></div>
+  </div>
+
   <!-- ===== CUSTOM CURSOR (desktop only) ===== -->
   <div class="cursor" id="cursor" aria-hidden="true"></div>
   <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
@@ -107,19 +115,19 @@
 
     <div class="hero-stats container" aria-label="Portfolio statistics">
       <div class="stat">
-        <div class="stat-num" data-count="12" aria-label="12 projects">0+</div>
+        <div class="stat-num" data-count="35" aria-label="35 projects">0+</div>
         <div class="stat-label">PROJECTS</div>
       </div>
       <div class="stat">
-        <div class="stat-num" data-count="12" aria-label="12 skills">0+</div>
+        <div class="stat-num" data-count="28" aria-label="28 skills">0+</div>
         <div class="stat-label">SKILLS</div>
       </div>
       <div class="stat">
-        <div class="stat-num" data-count="3" aria-label="3 certifications">0+</div>
+        <div class="stat-num" data-count="9" aria-label="9  certifications">0+</div>
         <div class="stat-label">CERTS</div>
       </div>
       <div class="stat">
-        <div class="stat-num" data-count="1" aria-label="1 year experience">0+</div>
+        <div class="stat-num" data-count="2" aria-label="2 years experience">0+</div>
         <div class="stat-label">YEARS EXP</div>
       </div>
     </div>
@@ -669,7 +677,7 @@
     </div>
   </section>
 
-  <!-- ===== DATA ANALYST PROJECTS ===== -->
+   <!-- ===== DATA ANALYST PROJECTS ===== -->
   <section id="data-analyst-projects" class="projects-section">
     <div class="container">
       <div class="section-header reveal">
@@ -678,65 +686,34 @@
         <div class="section-line"></div>
       </div>
 
-      <div class="projects-grid">
-
-        <article class="project-card reveal">
-          <div class="project-img-wrap">
-            <img src="https://www.geckoboard.com/_next/static/media/Sales-Manager-Live-Monitoring-dashboard-example.fc3da610.png" alt="Executive Sales Performance Power BI dashboard" loading="lazy">
-            <div class="project-overlay" aria-hidden="true"></div>
-            <span class="project-badge bi">Power BI</span>
+      <div class="blinkit-case-study">
+        <article class="blinkit-project reveal">
+          <div class="blinkit-project-heading">
+            <span class="project-badge bi">Data Analytics</span>
+            <span class="blinkit-column-label">Project</span>
           </div>
-          <div class="project-body">
-            <h3>Executive Sales Performance Dashboard</h3>
-            <p>Built an interactive Power BI dashboard to track revenue, profit margin, regional sales, product performance, and monthly growth trends for fast executive decision-making.</p>
+          <img src="https://raw.githubusercontent.com/malkitchoudhary/blinkit-ecommerce-analytics-dashboard/main/Blinkit.gif" alt="Blinkit E-Commerce Analytics Dashboard walkthrough" loading="lazy">
+          <div class="blinkit-project-body">
+            <h3>Blinkit E-Commerce Analytics Dashboard</h3>
+            <p>Interactive end-to-end business intelligence dashboard for sales, customers, products, delivery, inventory, marketing and customer feedback.</p>
             <div class="project-links">
-              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-accent3 btn-disabled">
-                Live Dashboard
-                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-              </a>
-              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-ghost btn-disabled">Case Study</a>
+              <a href="https://malkitchoudhary-blinkit-ecommerce-analytics-dashboar-app-kgmqtp.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn-sm btn-accent3">Live Dashboard <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+              <a href="https://github.com/malkitchoudhary/blinkit-ecommerce-analytics-dashboard" target="_blank" rel="noopener noreferrer" class="btn-sm btn-ghost">GitHub</a>
             </div>
           </div>
         </article>
 
-        <article class="project-card reveal">
-          <div class="project-img-wrap">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKh4Fwak5VBsZIxfZ8s6XZ5t2ypSQhlP3c6w&s" alt="Customer churn analysis Power BI dashboard" loading="lazy">
-            <div class="project-overlay" aria-hidden="true"></div>
-            <span class="project-badge bi">Power BI</span>
+        <article class="blinkit-study-panel reveal">
+          <span class="blinkit-column-label">Case Study</span>
+          <h3>From raw e-commerce data to business decisions.</h3>
+          <p>Multiple business datasets are cleaned, validated and connected into one interactive Streamlit experience, giving stakeholders a clear view of performance and operational risk.</p>
+          <div class="blinkit-study-grid">
+            <div><span>Challenge</span><p>Bring fragmented sales, operations and customer data into one reliable view.</p></div>
+            <div><span>Approach</span><p>Profile data, validate relationships, calculate KPIs and build interactive Plotly views.</p></div>
+            <div><span>Outcome</span><p>Explore revenue, customer behaviour, delivery health, inventory risk and campaign performance in one place.</p></div>
           </div>
-          <div class="project-body">
-            <h3>Customer Churn &amp; Retention Analytics</h3>
-            <p>Designed a customer analytics report with churn rate, retention cohorts, high-risk segments, revenue leakage, and drill-through pages to identify customers likely to leave.</p>
-            <div class="project-links">
-              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-accent3 btn-disabled">
-                Live Dashboard
-                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-              </a>
-              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-ghost btn-disabled">Case Study</a>
-            </div>
-          </div>
+          <div class="blinkit-stack" aria-label="Technology stack"><span>Python</span><span>Pandas</span><span>Plotly</span><span>Streamlit</span></div>
         </article>
-
-        <article class="project-card reveal">
-          <div class="project-img-wrap">
-            <img src="https://cdn.boldbi.com/wp/blogs/finance-dashboard-examples/inisde-images-finance/finance-performance-dashboard.webp" alt="Financial performance Power BI dashboard" loading="lazy">
-            <div class="project-overlay" aria-hidden="true"></div>
-            <span class="project-badge bi">Power BI</span>
-          </div>
-          <div class="project-body">
-            <h3>Financial Performance &amp; Forecasting Dashboard</h3>
-            <p>Created a finance dashboard covering revenue, expenses, variance analysis, YoY growth, budget vs actuals, and forecasting visuals using Power Query and DAX measures.</p>
-            <div class="project-links">
-              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-accent3 btn-disabled">
-                Live Dashboard
-                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-              </a>
-              <a href="javascript:void(0)" aria-disabled="true" class="btn-sm btn-ghost btn-disabled">Case Study</a>
-            </div>
-          </div>
-        </article>
-
       </div>
     </div>
   </section>
@@ -911,6 +888,26 @@ Gained experience deriving insights and solving problems using data-driven appro
     </div>
 
     <ol class="experience-timeline" aria-label="Experience and education timeline">
+          <li class="timeline-entry reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <p class="timeline-date">SEP 2026 &mdash; PRESENT &middot; CURRENT</p>
+              <h2>Data Science Developer</h2>
+              <h3>Samyak Computer Classes &middot; 150+ Branches Worldwide &middot; Part-time</h3>
+              <p class="timeline-location">Alwar, Rajasthan, India &middot; On-site</p>
+              <p>Training Data Science trainees in Python, SQL, Machine Learning, Pandas, NumPy, and practical data analysis concepts.</p>
+            </div>
+          </li>
+          <li class="timeline-entry reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <p class="timeline-date">JUN 2026 &mdash; AUG 2026</p>
+              <h2>Data Science Professional</h2>
+              <h3>WE RNS IT Solutions Pvt. Ltd. &middot; Full-time</h3>
+              <p class="timeline-location">Jaipur, Rajasthan, India &middot; On-site</p>
+              <p>Worked as a Data Science professional, gaining hands-on experience in Data Science, Machine Learning, Deep Learning, and NLP.</p>
+            </div>
+          </li>
           <li class="timeline-entry reveal">
             <div class="timeline-dot" aria-hidden="true"></div>
             <div class="timeline-content">
